@@ -1,0 +1,35 @@
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("background_1.png");
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    /* Make sure the body doesn't have any styles that would interfere with the overlay */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+h1{
+    font-family: 'Rubik Doodle Shadow', system-ui;
+    font-size: 45px !important;
+}
+canvas{
+    animation-name: fade;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes fade{
+    from{box-shadow: 1px 1px 38px rgb(0, 2, 94);}
+    to{box-shadow: 1px 1px 38px rgb(248, 44, 139);}
+}
